@@ -1,0 +1,305 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f9;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+h1 {
+
+
+    color: #333;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: 20px;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f3f3f3;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    order: 0; /* Default left */
+}
+
+.sidebar-subpage {
+    order: 2; /* Moves sidebar to right */
+}
+
+.sidebar p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.content {
+    flex: 1;
+    order: 1;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.intro {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+
+    display: none;
+}
+
+.intro.active {
+    display: block;
+}
+
+
+.intro img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+/* 清單與段落美化 */
+.intro ul {
+    padding-left: 20px;
+}
+
+.intro li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+
+.back-home {
+    display: block;
+    margin-top: 30px;
+    text-align: center;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+}
+
+.back-home:hover {
+    background-color: #0056b3;
+}
+
+.intro-img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+ul.tab-list {
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 200px;
+  }
+
+
+.tab{
+    width: 200px;
+    height: 50px;
+    background: #2E5266;
+    color: #FFF;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+    margin: 0;
+}
+
+.tab.active{
+height: 50px;
+background: #CFCFEA;
+color: #2E5266;
+border-top: 2px solid #6E8898;
+box-sizing: border-box;
+}
+
+.tab a {
+    color: inherit; /* 繼承父層 (.tab) 的文字顏色 */
+    text-decoration: none; /* 可選：移除底線 */
+    display: block;        /* 讓整個 li 的高度都可以點擊 */
+    width: 100%;
+    height: 100%;
+}
+
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    box-sizing: border-box;
+}
+  
+  /* 圖片ul */
+#slider-list {
+    position: absolute;
+    height: 1000px;
+    padding: 0px;
+    list-style-type: none;
+    left: 0px;
+    transition: all 0.8s ease-in-out;
+}
+  
+  /* 圖片ul li */
+.slider-item {
+    float: left;
+  }
+  
+  /* 圓點ul */
+.slider-control {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+  /* 圓點ul li */
+.slider-control .control {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 8px;
+    border-radius: 100%;
+    background-color: #fff;
+    cursor: pointer;
+}
+  
+.slider-control .control.active {
+    background-color: #ff0;
+}
+  
+.slider-item {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+  
+.slider-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin-top: -15px;
+}
+
+/* 導覽區塊 */
+.menu-nav {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* 第一層 */
+.menu,
+.menu-list {
+    cursor: pointer;
+    height: 30px;
+}
+
+/* 第一層ul */
+.menu {
+    width: 100%;
+}
+
+/* 第一層li */
+.menu-list {
+    position: relative;
+    list-style: none;
+    width: 15%;
+    border: 1px solid #444;
+    background-color: #888;
+    line-height: 30px;
+    color: #FFF;
+    float: left;
+}
+
+/* 下拉選單內容區塊 */
+.menu-list-content-div {
+    position: absolute;
+    display: none;
+    box-shadow: 3px 3px 3px 3px #888;
+    min-width: 800px;
+    left: -265px;
+    text-align: left;
+}
+
+/* ul選單區塊(直向) */
+.list-content-div {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* 內容區塊內的ul */
+.content-ul {
+    list-style: none;
+}
+
+/* 內容區塊內的li內的font元素 */
+.content-ul-list>font {
+    font-weight: bold;
+    color: #000;
+}
+
+/* 內容區塊內的li內的a元素 */
+.content-ul-list>a {
+    text-decoration: none;
+    color: #444;
+}
+
+/* 當滑鼠移過內容區塊內的li內的a元素 */
+.content-ul-list>a:hover {
+    text-decoration: underline;
+}
+
+/* 內容區塊內有圖片的li */
+.ul-images-list {
+    background-color: #DDD;
+    width: 150px;
+    text-align: center;
+}
+
+/* 內容區塊內有圖片的li裡的a */
+.ul-images-list>a {
+    text-decoration: none;
+    color: #444;
+    white-space: normal;
+}
+
+/* 當滑鼠移過內容區塊內有圖片的li裡的a */
+.ul-images-list>a:hover {
+    text-decoration: underline;
+}
